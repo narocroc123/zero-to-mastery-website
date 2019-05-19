@@ -127,6 +127,22 @@ When adding styles try to ensure the following:
     margin-top: 0;
 }
 
+.navbar-nav {
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    padding: 20px;
+    top: -20px;
+    border-radius: 2px;
+    transition: all 0.5s;
+    transform: translateY(100px);
+    will-change: opacity;
+    display: none;
+}
+
+.trigger-enter .navbar-nav {
+    display: block;
+}
 
 /* This aligns the dropdown content so that the items under 'Community' are not cut off*/
 

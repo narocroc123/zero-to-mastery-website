@@ -19,3 +19,20 @@ function getDate(){
 }
 
 getDate();
+
+// Dropdown Navbar
+const triggers = document.querySelectorAll('.navbar-nav > li');
+const background = document.querySelector('.dropdownBackground');
+const nav = document.querySelector('.navbar');
+
+function handleEnter() {
+  this.classList.add('trigger-enter');
+  setTimeout(() => this.classList.add('trigger-enter-active'), 150);
+}
+
+function handleLeave() {
+  console.log('leave')
+}
+
+triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
